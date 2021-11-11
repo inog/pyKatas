@@ -1,6 +1,8 @@
+print ("hello world!")
+
 a=2
 print(a)
-b = a + 2 
+b = a + 2
 print(b)
 
 kontostand = 123.2
@@ -11,8 +13,8 @@ kontostand = 123.2
 
 #plus (a,  b)
 #   return a + b
-    
-ergebnis = 2 ** 10 # 2 HOCH 10 
+
+ergebnis = 2 ** 10 # 2 HOCH 10
 print(ergebnis)
 
 ergebnis1 = 237 // 9
