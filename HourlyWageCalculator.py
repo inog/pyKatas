@@ -15,11 +15,10 @@ WEEKS=52
 
 def calcu(yearly, hoursPerWeek):
     monthly = yearly / 12
-    hourly = 3 * monthly / 13 / hoursPerWeek
-    print("monthly:", monthly)
-    print("hourly:", hourly)
+    return  3 * monthly / 13 / hoursPerWeek
 
-yearlyList = [60000,67000,70000,90000,100000]
-weekHours = [40, 37.5, 40, 40, 42]
+yearlyList = [60000, 52500,67000,70000,90000,100000, 110000]
+weekHours = [40.0, 30.0, 37.5, 40.0, 40.0, 42.0, 42.0]
 for y, hpw in zip(yearlyList,weekHours):
-    calcu(y,hpw)
+    hourly = calcu(y, hpw)
+    print("yearly: ", y, "hoursPerWeek: ", hpw, "monthly :", y/12, "hourly :", hourly )
