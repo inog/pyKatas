@@ -1,6 +1,5 @@
 """
-Calculate easily  yearly / monthly payment by given
-given:
+Calculate easily  yearly / monthly payment by given:
 yearly payment, hours per week
 
 wanted
