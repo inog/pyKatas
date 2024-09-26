@@ -1,5 +1,7 @@
 
-"""An implementation of the Binary System. Generates a binary number from a decimal number and vice versa."""
+"""An implementation of the Binary System. Generates a binary number from a decimal number and vice versa.
+Default is decimal to binary conversion but calling the file with the argument 'binary' or 'b' will convert binary to decimal."""
+import sys
 
 def decimal_to_binary(decimal):
     """Converts a decimal number to a binary number."""
@@ -19,17 +21,10 @@ def binary_to_decimal(binary):
 
 """starts the program and asks the user to enter a decimal number and converts it to a binary number"""
 if __name__ == '__main__':
-    """let the user decide if he wants to convert a decimal number to a binary number or a binary number to a decimal number"""
-    print("1. Decimal to Binary")
-    print("2. Binary to Decimal")
-    choice = int(input("Enter your choice: "))
-    if choice != 1 and choice != 2:
-        print("Invalid choice")
-        exit()
-    else:
-        if choice == 1:
-            decimal = int(input("Enter a decimal number: "))
-            print("Binary number:", decimal_to_binary(decimal))
-        else:
+    if len(sys.argv) > 1:
+        if sys.argv[1] in ['--binary', '--b']:
             binary = input("Enter a binary number: ")
             print("Decimal number:", binary_to_decimal(binary))
+    else:
+        decimal = int(input("Enter a decimal number: "))
+        print("Binary number:", decimal_to_binary(decimal))
